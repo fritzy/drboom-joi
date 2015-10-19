@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/fritzy/drboom-joi/issues"
   },
-  "homepage": "https://github.com/fritzy/drboom-joi#readme"
+  "homepage": "https://github.com/fritzy/drboom-joi#readme",
+  "dependencies": {
+    "boom": "^2.9.0",
+    "joi": "^6.9.1"
+  }
 }
