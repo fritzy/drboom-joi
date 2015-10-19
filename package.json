@@ -1,0 +1,27 @@
+{
+  "name": "drboom-joi",
+  "version": "0.0.1",
+  "description": "DrBoom plugin for handling Joi validation errors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fritzy/drboom-joi.git"
+  },
+  "keywords": [
+    "drboom",
+    "boom",
+    "joi",
+    "hapi",
+    "http",
+    "error"
+  ],
+  "author": "Nathan Fritz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fritzy/drboom-joi/issues"
+  },
+  "homepage": "https://github.com/fritzy/drboom-joi#readme"
+}
