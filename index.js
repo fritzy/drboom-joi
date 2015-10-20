@@ -6,12 +6,14 @@ module.exports = (options) => {
 
   return {
     detect: (value, request) => {
-      if (typeof value === 'object' && value.error === null && value.hasOwnProperty('value')) {
-        request.response.source = null;
+      if (typeof value === 'object' && value !== null) {
+        if (value.error === null && value.hasOwnProperty('value')) {
+          request.response.source = null;
+        } else if (value.error !== null && value.error.name) {
+          return true;
+        }
       }
-      return (typeof value === 'object' &&
-        value.error && 
-        value.error.name === 'ValidationError');
+      return false;
     },
     handle: (value) => {
       throw Boom.badRequest(value.error.toString());
