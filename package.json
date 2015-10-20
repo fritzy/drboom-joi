@@ -1,6 +1,6 @@
 {
   "name": "drboom-joi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DrBoom plugin for handling Joi validation errors.",
   "main": "index.js",
   "scripts": {
