@@ -9,7 +9,7 @@ module.exports = (options) => {
       if (typeof value === 'object' && value !== null) {
         if (value.error === null && value.hasOwnProperty('value')) {
           request.response.source = null;
-        } else if (value.error !== null && value.error.name) {
+        } else if (value.error !== null && value.error && value.error.name === 'ValidationError') {
           return true;
         }
       }
