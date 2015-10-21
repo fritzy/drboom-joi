@@ -7,12 +7,14 @@ module.exports = (options) => {
   return {
     detect: (value, request) => {
       if (typeof value === 'object' && value !== null) {
-        return value.isBoom === true;
+        return value.name === 'ValidationError';
       }
       return false;
     },
     handle: (value) => {
-      return Boom.badRequest(value);
+      let error = Boom.badRequest(value);
+      error.payload.details = value.details
+      return error;
     }
   };
 
