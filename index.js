@@ -12,7 +12,9 @@ module.exports = (options) => {
       return false;
     },
     handle: (value) => {
-      return Boom.badRequest(value);
+      let error = Boom.badRequest(value);
+      error.payload.details = value.details
+      return error;
     }
   };
 
