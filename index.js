@@ -1,7 +1,5 @@
 'use strict';
 
-let Boom = require('boom');
-
 module.exports = (options) => {
 
   return {
@@ -12,8 +10,7 @@ module.exports = (options) => {
       return false;
     },
     handle: (value) => {
-      let error = Boom.badRequest(value);
-      error.payload.details = value.details
+      let error = options.Boom.badRequest(value);
       return error;
     }
   };
